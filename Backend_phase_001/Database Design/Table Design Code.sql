@@ -1,3 +1,7 @@
+
+CREATE DATABASE `Ultimate_Health_Solution`;
+USE `Ultimate_Health_Solution`;
+
 CREATE TABLE `Hospital`(
     `Serial_No` INT UNSIGNED NOT NULL,
     `Hospital_ID` VARCHAR(200) NOT NULL,
