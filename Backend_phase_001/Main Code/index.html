@@ -23,6 +23,15 @@
             
         }
 
+        .input_area{
+            border: 2px solid black;
+            
+            padding: 0.5em;
+            height: 85%;
+            display: flex;
+        }
+
+        
 
        
     </style>
@@ -38,9 +47,15 @@ Hospital <span id="multiple_hospital_num">1</span>
 
 <div class="input_area">
 
+<label for="hospital_name">
+Enter Hospital Name : <input type="text" name="hospital_name" id="hospital_name" required>
+</label>
+<label for="hospital_address">
+Enter Hospital Address : <input type="text" name="hospital_address" id="hospital_address" required>
+</label>
 
 
-
+<input type="submit" value="submit" name="submit">
     
 </div>
 
