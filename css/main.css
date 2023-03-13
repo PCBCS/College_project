@@ -137,9 +137,129 @@ body {
       display: flex;
       justify-content: center;
       align-items:center ;
+      margin: 0rem 2rem;
+    }
+    .upper img {
+      height: 5.5rem;
+      width: 5.5rem;
+    }
+    .dipper img {
+      height: 5.5rem;
+      width: 5.5rem;
     }
     .dipper {
       display: flex;
       justify-content: center;
       align-items:center ;
+      margin: 0rem 2rem;
+    }
+    .h {
+      height:6rem;
+      width:25rem;
+      background-color: aliceblue;
+    }
+    .upper div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 4rem;
+      border:2px solid rgb(169, 165, 165);
+    }
+    .dipper div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 4rem;
+      border:2px solid rgb(169, 165, 165);
+    }
+    .h11 {
+      border-radius:20px 0 0 0;
+    }
+    .h111 {
+      border-radius: 0 0 0 20px;
+    }
+    .h33 {
+      border-radius:0 20px 0 0;
+    }
+    .h333 {
+      border-radius:0 0 20px 0;
+    }
+    .wel {
+      margin: 2rem 10rem; 
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+    }
+    .des {
+      font-size: 22px;
+    }
+    .cz {
+        margin: 2rem;
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+      justify-content:center;
+      align-items: center;
+        /* padding:0rem 10rem; */
+        background-color: aliceblue;
+    }
+    .picss {
+      margin-top: 3rem;
+    
+    }
+    .hss {
+      background-color: #00078e;
+      color: white;
+      font-weight: 500;
+      font-size: 22px;
+    }
+    .apply {
+      background-color: #4c51b6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: yellow;
+      height: 15rem;
+      border: none;
+    }
+    .apply button {
+      background-color: rgb(255, 179, 0);
+      color:white ;
+      border: none;
+    }
+    .apply button {
+      margin: 1rem;
+      padding:0.7rem 1.5rem;
+      font-size: 22px;
+      font-weight:500 ;
+    }
+    .news {
+      margin:2rem 10rem;
+      font-size: 22px;
+    }
+    .news p {
+      margin: 5rem;
+    }
+
+    .loc,.quick,.touch {
+      /* height: 13rem; */
+      color: white;
+      margin: 2rem;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #464242;
+      /* height: 8rem; */
+    }
+    footer div {
+      padding: 3rem;
+    }
+    .quick a{
+        text-decoration: none;
+        color: white;
+    }
+    .quick a:hover {
+      color: coral;
     }

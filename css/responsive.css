@@ -44,4 +44,70 @@
     .first_nav div {
         padding: 0.3rem;
     }
+    .upper {
+      margin: 0rem 5rem;
+      
+    }
+    .upper div {
+      width: 10rem;
+      font-size: 12px;
+    }
+    .dipper div {
+      width: 10rem;
+      font-size: 12px;
+    }
+    .h11 {
+      border-radius:20px 0 0 0;
+    }
+    .h111 {
+      border-radius: 0 0 0 20px;
+    }
+    .h33 {
+      border-radius:0 20px 0 0;
+    }
+    .h333 {
+      border-radius:0 0 20px 0;
+    }
+    .upper img {
+      height:3.4rem;
+    }
+    .dipper img {
+      height:3.4rem;
+    }
+    .wel {
+      flex-direction: column;
+      margin:1.5rem;
+    }
+    .des {
+      margin: 0%;
+      padding: 0%;
+    }
+    .cz {
+      width: 26rem  ;
+    }
+    .picss {
+      margin: 1rem;
+    }
+    .apply {
+      flex-direction: column;
+    }
+    .apply button {
+      margin: 1rem;
+      padding:0.7rem 1.5rem;
+      font-size: 22px;
+      font-weight:500 ;
+    }
+    .news {
+      margin:2rem;
+      font-size: 22px;
+    }
+    .news p {
+      margin: 2rem;
+    }
+    footer {
+      flex-direction: column;
+    }
+    footer div {
+      padding: 0%;
+    }
 }
