@@ -36,7 +36,7 @@
       text-align:center;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 300px) {
     .first_nav {
         padding: 0.3rem 1rem;
         flex-direction: column  ;
@@ -49,11 +49,11 @@
       
     }
     .upper div {
-      width: 9rem;
+      width: 6rem;
       font-size: 12px;
     }
     .dipper div {
-      width: 9rem;
+      width: 6rem;
       font-size: 12px;
     }
     .h11 {
@@ -110,4 +110,7 @@
     footer div {
       padding: 0%;
     }
+    .cz {
+      width:20rem;
+  }
 }
