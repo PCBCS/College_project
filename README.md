@@ -31,9 +31,9 @@ A website in which mutiple health related facilities are provided.
 
 ## Authors
 
-- [Rahul Agrawal](https://www.github.com/octokatherine)  ( Design & Analysis )
+- [Rahul Agrawal]()  ( Design & Analysis )
 
-- [Debashish Sahu](https://www.github.com/octokatherine)  ( Front-End )
+- [Debashish Sahu](https://github.com/Deba2k03)  ( Front-End )
 
-- [Ruturaj Biswal](https://www.github.com/ruturajbiswal2003)  ( Back-End )
+- [Ruturaj Biswal](https://github.com/ruturajbiswal)  ( Back-End )
 
