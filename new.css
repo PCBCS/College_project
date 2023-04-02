@@ -197,8 +197,7 @@ footer li {
 .titles {
     font-size: 38px;
 }
-<<<<<<< HEAD
-@media (max-width: 500px) {
+@media (max-width: 768px){
     .container {
         flex-direction: column;
     }
@@ -365,5 +364,4 @@ display: none;
                         .drop_down {
                             background-color:rgb(52, 52, 101);
                         }
-=======
->>>>>>> 509d3f2cc850ec64621b79c1bcbcf6748b7
+                    }
