@@ -198,7 +198,5 @@ footer li {
     font-size: 38px;
 }
 @media screen and (min-width: 300px) {
-.container {
-flex-direction:column
-}
+
 }
