@@ -188,18 +188,12 @@ footer div ul {
 a:hover {
     color: coral;
 }
-.navs li {
-    margin: 1rem;
-}
 footer li {
-    margin: 1rem;
+    margin: 0.5rem;
 }
-header {
-    overflow:hidden;
+.abt_img img{
+    margin-top: 5rem;
 }
-main {
-    overflow: hidden;
-}
-footer {
-    overflow: hidden;
+.titles {
+    font-size: 38px;
 }
