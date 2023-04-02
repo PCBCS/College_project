@@ -197,3 +197,8 @@ footer li {
 .titles {
     font-size: 38px;
 }
+@media screen and (max-width: 600px) {
+.container {
+flex-direction:column
+}
+}
