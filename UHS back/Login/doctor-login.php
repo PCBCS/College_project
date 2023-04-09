@@ -69,7 +69,8 @@ if($_SERVER['REQUEST_METHOD']==='POST')
     $doctor_data_row=mysqli_fetch_assoc($res_validateDoctor);
     //CHECKING THE HASHED PASSWORD VALUE & INPUTTED PASSWORD VALUE ARE MATCHING OR NOT
     if(password_verify($d_password,$doctor_data_row['doctor_password'])){
-        echo "Password Matched";
+        $_SESSION['doctor_id']=$hospital_data_row['doctor_id'];//CREATING A SESSION GLOBAL FOR USING THE VALUE ALL ACROSS THE PAGE
+        echo"<script>window.open('../admin/admin-doctor.php','_self')</script>";
     }
 else{
     echo "Password Not Matched";

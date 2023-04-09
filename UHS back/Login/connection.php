@@ -2,7 +2,7 @@
 $serverName='localhost';
 $userName='root';
 $passWord='';
-$dataBase='uhs';
+$dataBase='uhs_database';
 
 $connection=mysqli_connect($serverName,$userName,$passWord,$dataBase);
 

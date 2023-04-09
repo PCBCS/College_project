@@ -69,7 +69,8 @@ if($_SERVER['REQUEST_METHOD']==='POST')
     $patient_data_row=mysqli_fetch_assoc($res_validatePatient);
     //CHECKING THE HASHED PASSWORD VALUE & INPUTTED PASSWORD VALUE ARE MATCHING OR NOT
     if(password_verify($p_password,$patient_data_row['patient_password'])){
-        echo "Password Matched";
+        $_SESSION['patient_id']=$patient_data_row['patient_id'];//CREATING A SESSION GLOBAL FOR USING THE VALUE ALL ACROSS THE PAGE
+        echo"<script>window.open('../admin/admin-patient.php','_self')</script>";
     }
 else{
     echo "Password Not Matched";

@@ -73,8 +73,9 @@ if($_SERVER['REQUEST_METHOD']==='POST')
     $hospital_data_row=mysqli_fetch_assoc($res_validateHospital);
     //CHECKING THE HASHED PASSWORD VALUE & INPUTTED PASSWORD VALUE ARE MATCHING OR NOT
     if(password_verify($h_password,$hospital_data_row['hospital_password'])){
-        $_SESSION['hospital_id']=$hospital_data_row['hospital_id'];
-        header('Location:./admin/admin-hospital.html');
+        $_SESSION['hospital_id']=$hospital_data_row['hospital_id']; //CREATING A SESSION GLOBAL FOR USING THE VALUE ALL ACROSS THE PAGE
+        echo"<script>window.open('../admin/admin-hospital.php','_self')</script>";
+        exit();
     }
 else{
     echo "<script>document.getElementById('wrong_input').style.display='block';</script>";
