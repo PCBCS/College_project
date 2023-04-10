@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2023 at 04:56 AM
+-- Generation Time: Apr 10, 2023 at 01:44 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `uhs_database`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointments`
+--
+
+CREATE TABLE `appointments` (
+  `serial_no` int(100) NOT NULL,
+  `patient_id` varchar(255) NOT NULL,
+  `doctor_id` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `appointments`
+--
+
+INSERT INTO `appointments` (`serial_no`, `patient_id`, `doctor_id`) VALUES
+(1, 'UHS-P-64319228aa397', 'UHS-D-64317ccbd3545'),
+(2, 'UHS-P-6431855211239', 'UHS-D-64317ccbd3545');
 
 -- --------------------------------------------------------
 
@@ -113,16 +133,49 @@ INSERT INTO `patient` (`serial_no`, `patient_id`, `patient_first_name`, `patient
 (2, 'UHS-P-643185ccbeadc', 'Saloni', 'Sanu', 'Female', '05/06/2003', 20, ' A+', 'Burla', 'Sambalpur', 'Odisha', 1234567890, 'saloni@mail.com', '$2y$10$nHlAB7zYInnY8NFR2y6vD.Ozd0kv1l.7G/gdeNAyO4Qj3qKmyCpma'),
 (3, 'UHS-P-64319228aa397', 'Annab', 'Shoo', 'Male', '15/03/1998', 25, ' O+', 'Attabira', 'Bargarh', 'Odisha', 1528492, 'annab@mail.com', '$2y$10$N3UmbMd72nAcvg5HrPsUgetfnMEaiSzNLIgsYgHvTPW0YMeCRzQtO');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patient_history`
+--
+
+CREATE TABLE `patient_history` (
+  `serial_no` int(100) NOT NULL,
+  `treatment_date` text NOT NULL,
+  `patient_id` varchar(255) NOT NULL,
+  `doctor_id` varchar(255) NOT NULL,
+  `patient_disease` text NOT NULL,
+  `patient_medication` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `patient_history`
+--
+
+INSERT INTO `patient_history` (`serial_no`, `treatment_date`, `patient_id`, `doctor_id`, `patient_disease`, `patient_medication`) VALUES
+(1, '09/04/2023', 'UHS-P-6431855211239', 'UHS-D-64317ccbd3545', 'Fever', 'Paracetamol 250mg,Zerodol SP'),
+(2, '09/04/2023', 'UHS-P-6431855211239', 'UHS-D-64317ccbd3545', 'Headache', 'Asprin'),
+(3, '09/04/2023', 'UHS-P-6431855211239', 'UHS-D-64317ccbd3545', 'Fever', 'Zerodol Sp');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `appointments`
+--
+ALTER TABLE `appointments`
+  ADD PRIMARY KEY (`serial_no`),
+  ADD KEY `appointments_ibfk_1` (`patient_id`),
+  ADD KEY `doctor_id` (`doctor_id`);
 
 --
 -- Indexes for table `doctor`
 --
 ALTER TABLE `doctor`
   ADD PRIMARY KEY (`doctor_id`),
-  ADD UNIQUE KEY `serial_no` (`serial_no`);
+  ADD UNIQUE KEY `serial_no` (`serial_no`),
+  ADD KEY `hospital_id` (`hospital_id`);
 
 --
 -- Indexes for table `hospital`
@@ -139,8 +192,22 @@ ALTER TABLE `patient`
   ADD UNIQUE KEY `serial_no` (`serial_no`);
 
 --
+-- Indexes for table `patient_history`
+--
+ALTER TABLE `patient_history`
+  ADD PRIMARY KEY (`serial_no`),
+  ADD KEY `doctor_id` (`doctor_id`),
+  ADD KEY `patient_id` (`patient_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `appointments`
+--
+ALTER TABLE `appointments`
+  MODIFY `serial_no` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `doctor`
@@ -159,6 +226,35 @@ ALTER TABLE `hospital`
 --
 ALTER TABLE `patient`
   MODIFY `serial_no` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `patient_history`
+--
+ALTER TABLE `patient_history`
+  MODIFY `serial_no` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `appointments`
+--
+ALTER TABLE `appointments`
+  ADD CONSTRAINT `appointments_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `appointments_ibfk_2` FOREIGN KEY (`doctor_id`) REFERENCES `doctor` (`doctor_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `doctor`
+--
+ALTER TABLE `doctor`
+  ADD CONSTRAINT `doctor_ibfk_1` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `patient_history`
+--
+ALTER TABLE `patient_history`
+  ADD CONSTRAINT `patient_history_ibfk_1` FOREIGN KEY (`doctor_id`) REFERENCES `doctor` (`doctor_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
