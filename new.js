@@ -1,8 +1,10 @@
 // date time
 
-var datetime = new Date();
-console.log(datetime);
-document.getElementById("time").textContent = datetime;
+setInterval(() => {
+  let dateTime=new Date().toLocaleString();
+  document.getElementById('time').innerHTML=dateTime
+
+}, 1000);
 
   // photo
   var slideIndex = 1;
