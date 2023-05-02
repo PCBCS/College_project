@@ -20,6 +20,17 @@
 <p>Redirecting to homepage in 0<span id="counter">3</span>s</p>
 
         </div></div>
+        <script>
+            // Replace the current state in the browser's history with a new, null state
+history.pushState(null, null, document.URL);
+
+// Add an event listener to the window's popstate event
+window.addEventListener('popstate', function () {
+  // When the popstate event fires (i.e. when the user navigates back or forward),
+  // replace the current state with the null state
+  history.pushState(null, null, document.URL);
+});
+        </script>
 </body>
 
 <script>
@@ -28,7 +39,7 @@ setInterval(()=>{
 document.getElementById('counter').innerHTML=counter
 if(counter==0)
 {
-    window.open("","_self")
+    window.open("https://pcbcs.github.io/College_project/","_self")
 }
 else{
     counter=counter-1
@@ -36,6 +47,9 @@ else{
 
 
 },800)
+
+
+
 
 </script>
 </html>

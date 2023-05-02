@@ -18,6 +18,9 @@
 <!-- Custom CSS -->
 
 <style>
+/* body{
+    padding:5rem;
+} */
     form,option{
         font-weight: 550;
         font-size: 1.2rem;
@@ -33,12 +36,12 @@
 
 
 </head>
-<body class="bg-black">
+<body class="bg-black  pt-5">
     
-<div class="container border border-primary border-1 col-lg-3 col-md-7   bg-body-secondary position-absolute top-50 start-50 translate-middle rounded-2 p-2">
+<div class="container border border-primary border-1 col-lg-8 col-md-7   bg-body-secondary position-absolute top-50 start-50 translate-middle rounded-2 mt-5 mb-4 pb-4">
 
 <form action="./doctor-reg.php" method="post">
-    <h3 class="text-center mb-5 mt-2">Doctor Registration</h3>
+    <h3 class="text-center mb-2 mt-2">Doctor Registration</h3>
     <div class="container bg-body-tertiary  border border-black border-1 border-opacity-60 rounded-2 p-2 shadow">
         <label for="name">Doctor Name</label>
        <div class="container-fluid d-flex justify-content-evenly p-0">
@@ -101,7 +104,7 @@ while($row_hget=mysqli_fetch_array($hGet))
   <option value="gastroenterologist">Gastroenterologist</option>
   <option value="hematologist">Hematologist</option>
   <option value="neurologist">Neurologist</option>
-  <option value="obgyn">Obstetrician/Gynecologist</option>
+  <option value="Gynecologist">Gynecologist</option>
   <option value="oncologist">Oncologist</option>
   <option value="ophthalmologist">Ophthalmologist</option>
   <option value="orthopedic-surgeon">Orthopedic Surgeon</option>
