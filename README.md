@@ -1,5 +1,5 @@
 
-# Ultimate Health Solution
+<!--# Ultimate Health Solution
 A website in which mutiple health related facilities are provided.
 
 
@@ -35,5 +35,5 @@ A website in which mutiple health related facilities are provided.
 
 - [Debashish Sahu](https://github.com/Deba2k03)  ( Front-End )
 
-- [Ruturaj Biswal](https://github.com/ruturajbiswal)  ( Back-End )
+ - [Ruturaj Biswal](https://github.com/ruturajbiswal)  ( Back-End ) -->
 
